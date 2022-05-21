@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #4F9F74;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Budget">
+    <children>
+        <Label layoutX="529.0" text="Zoo" textFill="#f4f0e5">
+            <font>
+                <Font name="Centaur" size="96.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="1.0" layoutY="118.0" prefHeight="643.0" prefWidth="1200.0" style="-fx-background-color: F4F0E5;">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="1200.0">
+               <children>
+                  <Button fx:id="animalsBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Animals" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="budgetBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #4F9F74; -fx-border-radius: 0; -fx-background-radius: 0;" text="Budget" textFill="#f4f0e5">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="storageBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Storage" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Profile" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane layoutX="13.0" layoutY="65.0" prefHeight="559.0" prefWidth="1171.0">
+               <children>
+                  <TableView fx:id="mainTable" layoutX="347.0" layoutY="49.0" onMouseClicked="#getSelect" prefHeight="496.0" prefWidth="808.0">
+                    <columns>
+                      <TableColumn fx:id="idCol" prefWidth="37.0" text="№" />
+                      <TableColumn fx:id="sumCol" prefWidth="112.0" text="Sum" />
+                        <TableColumn fx:id="userCol" prefWidth="132.0" text="User" />
+                        <TableColumn fx:id="oldSumCol" prefWidth="131.0" text="Balance before" />
+                        <TableColumn fx:id="dateCol" prefWidth="181.0" text="Date-Time" />
+                        <TableColumn fx:id="descripCol" prefWidth="214.0" text="Description" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" text="Current:">
+                     <font>
+                        <Font name="Centaur" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="currentLbl" layoutX="14.0" layoutY="60.0" text="00000,00" textFill="#1b94d0">
+                     <font>
+                        <Font name="Centaur" size="31.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="131.0" text="Monthly cange:">
+                     <font>
+                        <Font name="Centaur" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="changesLbl" layoutX="14.0" layoutY="178.0" text="00000,00" textFill="#f20000">
+                     <font>
+                        <Font name="Centaur" size="28.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="payrollBtn" layoutX="24.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="220.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Payroll" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="addBtn" layoutX="24.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="220.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Add" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <DatePicker fx:id="fromDate" layoutX="469.0" layoutY="3.0" style="-fx-control-inner-background: #89BFA2; -fx-unfocus-color: #89BFA2;" />
+                  <DatePicker fx:id="toDate" layoutX="688.0" layoutY="3.0" style="-fx-control-inner-background: #89BFA2;" />
+                  <Label layoutX="664.0" layoutY="7.0" text="To:" />
+                  <Label layoutX="430.0" layoutY="7.0" text="From" />
+                  <TextField fx:id="sumField" layoutX="24.0" layoutY="258.0" prefHeight="34.0" prefWidth="181.0" promptText="Sum">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="descField" alignment="TOP_LEFT" layoutX="24.0" layoutY="305.0" prefHeight="83.0" prefWidth="302.0" promptText="Description">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="24.0" layoutY="227.0" text="Add new transaction">
+                     <font>
+                        <Font name="Centaur" size="22.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="searchBtn" layoutX="1050.0" layoutY="-2.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Search" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="clearBtn" layoutX="925.0" layoutY="-2.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="34.0" prefWidth="69.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Clear" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

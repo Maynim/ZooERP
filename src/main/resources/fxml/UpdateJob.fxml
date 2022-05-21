@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="274.0" prefWidth="491.0" style="-fx-background-color: #4F9F74;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateJob">
+    <children>
+        <Label layoutX="8.0" layoutY="6.0" text="Update job" textFill="#f4f0e5">
+            <font>
+                <Font name="Centaur" size="44.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutY="65.0" prefHeight="166.0" prefWidth="491.0" style="-fx-background-color: F4F0E5;">
+         <children>
+            <Label layoutX="15.0" layoutY="14.0" text="New job">
+               <font>
+                  <Font name="Centaur" size="22.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameFld" layoutX="14.0" layoutY="40.0" prefHeight="27.0" prefWidth="169.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addBtn" layoutX="14.0" layoutY="86.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="211.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Add" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="25.0" />
+               </font>
+            </Button>
+            <MenuButton fx:id="jobSlct" layoutX="200.0" layoutY="39.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #89BFA2; -fx-background-radius: 0;" text="Select">
+               <items>
+                  <MenuItem fx:id="maleItem" mnemonicParsing="false" text="Male" />
+                  <MenuItem fx:id="femaleItem" mnemonicParsing="false" text="Female" />
+               </items>
+               <font>
+                  <Font name="Centaur" size="15.0" />
+               </font>
+            </MenuButton>
+         </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

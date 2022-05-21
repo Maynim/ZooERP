@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="471.0" prefWidth="491.0" style="-fx-background-color: #4F9F74;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.UpdateCollection">
+    <children>
+        <AnchorPane layoutY="76.0" prefHeight="355.0" prefWidth="491.0" style="-fx-background-color: F4F0E5;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Breeding">
+               <font>
+                  <Font name="Centaur" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="98.0" text="Description">
+               <font>
+                  <Font name="Centaur" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="healthFld" layoutX="14.0" layoutY="48.0" prefHeight="39.0" prefWidth="467.0" promptText="Yes/No" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="20.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="descFld" alignment="TOP_LEFT" layoutX="14.0" layoutY="137.0" prefHeight="118.0" prefWidth="467.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="20.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addBtn" layoutX="14.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="211.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Add" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="25.0" />
+               </font>
+            </Button>
+         </children>
+        </AnchorPane>
+      <Label layoutX="14.0" layoutY="14.0" text="Update collection" textFill="#f4f0e5">
+         <font>
+            <Font name="Centaur" size="44.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

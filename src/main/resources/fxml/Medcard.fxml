@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #4F9F74;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Medcard">
+    <children>
+        <Label layoutX="529.0" text="Zoo" textFill="#f4f0e5">
+            <font>
+                <Font name="Centaur" size="96.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="1.0" layoutY="118.0" prefHeight="640.0" prefWidth="1200.0" style="-fx-background-color: F4F0E5;">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="1200.0">
+               <children>
+                  <Button fx:id="animalsBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Animals" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="budgetBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Budget" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="storageBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Storage" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="profileBtn" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="300.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Profile" textFill="#4d1100">
+                     <font>
+                        <Font name="Centaur" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <TableView fx:id="mainTable" layoutX="517.0" layoutY="102.0" prefHeight="510.0" prefWidth="660.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="46.0" text="ID" />
+                  <TableColumn fx:id="dateCol" prefWidth="157.0" text="Date Time" />
+                  <TableColumn fx:id="medCol" prefWidth="173.0" text="Medicament" />
+                  <TableColumn fx:id="countCol" prefWidth="76.0" text="Count (mg.)" />
+                <TableColumn fx:id="descCol" prefWidth="207.0" text="Description" />
+              </columns>
+            </TableView>
+            <Label layoutX="16.0" layoutY="74.0" text="Name">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="111.0" text="Health">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="148.0" text="Description">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="backBtn" layoutX="20.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="220.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Back" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="25.0" />
+               </font>
+            </Button>
+            <Label layoutX="517.0" layoutY="56.0" text="History">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="addBtn" layoutX="275.0" layoutY="505.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="220.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Add" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="25.0" />
+               </font>
+            </Button>
+            <Label fx:id="nameLbl" layoutX="90.0" layoutY="74.0" text="name">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="healthLbl" layoutX="103.0" layoutY="111.0" text="Health">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="descLbl" alignment="TOP_LEFT" layoutX="16.0" layoutY="185.0" prefHeight="259.0" prefWidth="489.0" text="Description">
+               <font>
+                  <Font name="Centaur" size="29.0" />
+               </font>
+            </Label>
+            <Button fx:id="refreshBtn" layoutX="618.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Refresh" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="upadateBtn" layoutX="275.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="220.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Update" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="25.0" />
+               </font>
+            </Button>
+         </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

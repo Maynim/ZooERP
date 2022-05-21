@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="344.0" style="-fx-background-color: #4F9F74;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddAnimal">
+    <children>
+        <Label layoutX="8.0" layoutY="14.0" text="Add new animal " textFill="#f4f0e5">
+            <font>
+                <Font name="Centaur" size="44.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutY="79.0" prefHeight="591.0" prefWidth="344.0" style="-fx-background-color: F4F0E5;">
+         <children>
+            <Label layoutX="15.0" layoutY="14.0" text="Name">
+               <font>
+                  <Font name="Centaur" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="72.0" text="Subspecies">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="132.0" text="Birthday">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameFld" layoutX="14.0" layoutY="40.0" prefHeight="27.0" prefWidth="272.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="countFld" alignment="TOP_LEFT" layoutX="110.0" layoutY="73.0" prefHeight="27.0" prefWidth="174.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <Button fx:id="addBtn" layoutX="12.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleButtonClicks" prefHeight="49.0" prefWidth="211.0" style="-fx-background-color: #89BFA2; -fx-border-radius: 0; -fx-background-radius: 0;" text="Add" textFill="#4d1100">
+               <font>
+                  <Font name="Centaur" size="25.0" />
+               </font>
+            </Button>
+            <DatePicker layoutX="14.0" layoutY="161.0" style="-fx-background-radius: 0;" />
+            <Label layoutX="15.0" layoutY="252.0" text="Time">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameFld1" layoutX="14.0" layoutY="281.0" prefHeight="27.0" prefWidth="131.0" promptText="HH:MM:SS" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="15.0" layoutY="318.0" text="Father ID">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="countFld1" alignment="TOP_LEFT" layoutX="104.0" layoutY="319.0" prefHeight="27.0" prefWidth="211.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.0" layoutY="385.0" text="Mother ID">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="countFld11" alignment="TOP_LEFT" layoutX="117.0" layoutY="386.0" prefHeight="27.0" prefWidth="204.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.0" layoutY="451.0" text="Aviary ID">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="countFld111" alignment="TOP_LEFT" layoutX="104.0" layoutY="452.0" prefHeight="27.0" prefWidth="204.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <MenuButton fx:id="aviarySlct" layoutX="17.0" layoutY="483.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #89BFA2; -fx-background-radius: 0;" text="Select">
+               <font>
+                  <Font name="Centaur" size="15.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="motherSlct" layoutX="17.0" layoutY="417.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #89BFA2; -fx-background-radius: 0;" text="Select">
+               <font>
+                  <Font name="Centaur" size="15.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="fatherSlct" layoutX="16.0" layoutY="350.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #89BFA2; -fx-background-radius: 0;" text="Select">
+               <font>
+                  <Font name="Centaur" size="15.0" />
+               </font>
+            </MenuButton>
+            <Label layoutX="13.0" layoutY="189.0" text="Genger">
+               <font>
+                  <Font name="Centaur" size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="countFld2" alignment="TOP_LEFT" layoutX="80.0" layoutY="194.0" prefHeight="27.0" prefWidth="174.0" style="-fx-background-radius: 0;">
+               <font>
+                  <Font name="Centaur" size="14.0" />
+               </font>
+            </TextField>
+            <MenuButton fx:id="genderSlct" layoutX="13.0" layoutY="223.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #89BFA2; -fx-background-radius: 0;" text="Select">
+               <items>
+                  <MenuItem fx:id="maleItem" mnemonicParsing="false" text="Male" />
+                  <MenuItem fx:id="femaleItem" mnemonicParsing="false" text="Female" />
+               </items>
+               <font>
+                  <Font name="Centaur" size="15.0" />
+               </font>
+            </MenuButton>
+            <MenuButton fx:id="subspecSlct" layoutX="14.0" layoutY="104.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" style="-fx-background-color: #89BFA2; -fx-background-radius: 0;" text="Select">
+               <font>
+                  <Font name="Centaur" size="15.0" />
+               </font>
+            </MenuButton>
+         </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
